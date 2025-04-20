@@ -9,7 +9,7 @@ export default function NavHeader() {
                     alt="Logo"
                     className="h-8 w-8 rounded-full"
                 />
-                <span className="text-lg font-bold">ImmoG</span>
+                <span className="text-lg font-bold">GAB SIMULATOR</span>
             </div>
         </div>
     );

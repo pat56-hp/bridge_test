@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SidebarInset, SidebarProvider } from "../components/ui/sidebar";
 import { AppSidebar } from "../components/sidebar/app-sidebar";
 import AppHeader from "../components/header/app-header";
 import { Separator } from "../components/ui/separator";
 import { Head, usePage } from "@inertiajs/react";
 import { Toaster } from "../components/ui/sonner";
+import { toast } from "sonner";
 
-const appName = import.meta.env.VITE_APP_NAME || "ImmoG";
+const appName = import.meta.env.VITE_APP_NAME || "GAB Simulator";
 
 export default function AppLayout({ children }) {
-    const { title } = usePage().props;
+    const { title, error, success } = usePage().props;
+
+    useEffect(() => {
+        error && toast.error("Oups, une erreur s'est produite");
+        success && toast.success(success);
+        error && console.log(error);
+    }, [children]);
 
     return (
         <>
@@ -17,7 +24,7 @@ export default function AppLayout({ children }) {
                 <title>{title ? `${title} - ${appName}` : appName}</title>
                 <meta
                     name="description"
-                    content="Administration de Gestion des loyers immobiliers"
+                    content="GAB Simulator"
                 />
             </Head>
             <SidebarProvider>
@@ -36,7 +43,7 @@ export default function AppLayout({ children }) {
                                 Conçu & Développé par{" "}
                                 <a
                                     href="https://github.com/pat56-hp"
-                                    className="text-red-400 hover:text-red-500 underline"
+                                    className="text-green-400 hover:text-green-500 underline"
                                     target="_blank"
                                 >
                                     Pat56-hp

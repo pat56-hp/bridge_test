@@ -32,7 +32,7 @@ export default function NavUser() {
                         <span className="truncate font-semibold">
                             {user.name}
                         </span>
-                        <span className="truncate text-xs">{user.email}</span>
+                        <span className="truncate text-xs">{user.balance} FCFA</span>
                     </div>
                 </div>
             </DropdownMenuTrigger>
@@ -42,21 +42,7 @@ export default function NavUser() {
                 align="end"
                 sideOffset={4}
             >
-                <DropdownMenuGroup>
-                    <Link href={route("profile.edit")}>
-                        <DropdownMenuItem>
-                            <BadgeCheck />
-                            Mon profil
-                        </DropdownMenuItem>
-                    </Link>
-                    <Link href={route("profile.password")}>
-                        <DropdownMenuItem>
-                            <LockKeyhole />
-                            Mot de passe
-                        </DropdownMenuItem>
-                    </Link>
-                </DropdownMenuGroup>
-                <DropdownMenuSeparator />
+                
                 <Link href={route("logout")} method="post" className="w-full">
                     <DropdownMenuItem>
                         <LogOut />

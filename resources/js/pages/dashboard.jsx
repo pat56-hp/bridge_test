@@ -1,19 +1,14 @@
 import React from "react";
 import AppLayout from "../layouts/app-layout";
 import PageTitle from "../components/page-title";
-import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-} from "../components/ui/tabs";
-import DashboardStats from "../components/dashboard/dashboard-stat";
 import Statistique from "../components/dashboard/statistique";
 import DashboardGraph from "../components/dashboard/dashboard-graph";
 import PayRecent from "../components/dashboard/pay-recent";
-import DataRecent from "../components/dashboard/data-recent";
+import DataRecent from "../components/dashboard/transactions";
+import DashboardStats from "../components/dashboard/dashboard-stat";
+import Transactions from "../components/dashboard/transactions";
 
-export default function Dashboard() {
+export default function Dashboard({statistics, latest_transaction}) {
     const breadcrumb = [
         {
             title: "Tableau de bord",
@@ -30,15 +25,11 @@ export default function Dashboard() {
                         breadcrumb={breadcrumb}
                     />
                     <p className="text-muted-foreground">
-                        Aperçu des statistiques et paiements des loyers.
+                        Aperçu des statistiques
                     </p>
                 </div>
-                <Statistique />
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-                    <DashboardGraph />
-                    <PayRecent />
-                </div>
-                <DataRecent />
+                <DashboardStats statistics={statistics} />
+                <Transactions transactions={latest_transaction} />
             </div>
         </AppLayout>
     );

@@ -1,11 +1,12 @@
 import "../css/app.css";
 import "./bootstrap";
+import "react-international-phone/style.css";
 
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { createRoot } from "react-dom/client";
 
-const appName = import.meta.env.VITE_APP_NAME || "Laravel";
+const appName = import.meta.env.VITE_APP_NAME || "GAB Simulator";
 
 createInertiaApp({
     resolve: (name) =>

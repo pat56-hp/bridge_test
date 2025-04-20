@@ -4,7 +4,7 @@ import { Card, CardContent } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
 import { Toaster } from "@/components/ui/sonner";
 
-const appName = import.meta.env.VITE_APP_NAMe || "ImmoG";
+const appName = import.meta.env.VITE_APP_NAMe || "GAB Simulator";
 
 export default function AuthLayout({ children }) {
     const { title } = usePage().props;
@@ -21,12 +21,12 @@ export default function AuthLayout({ children }) {
                             href="#"
                             className="flex items-center gap-2 self-center font-medium"
                         >
-                            <img
+                            {/* <img
                                 src="/images/logo.png"
                                 alt="Logo"
                                 className="h-13 w-13 rounded-full"
-                            />
-                            <h1 className="text-2xl">ImmoG</h1>
+                            /> */}
+                            <h1 className="text-2xl">GAB SIMULATOR</h1>
                         </a>
                         <Card className="overflow-hidden p-0">
                             <CardContent className="grid p-0 md:grid-cols-2">
@@ -50,7 +50,7 @@ export default function AuthLayout({ children }) {
                                 Conçu & Développé par{" "}
                                 <a
                                     href="https://github.com/pat56-hp"
-                                    className="text-red-400 hover:text-red-500 underline"
+                                    className="text-green-400 hover:text-green-500 underline"
                                     target="_blank"
                                 >
                                     Pat56-hp

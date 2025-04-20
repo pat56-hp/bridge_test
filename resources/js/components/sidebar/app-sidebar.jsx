@@ -35,112 +35,15 @@ export function AppSidebar() {
                 isActive: url.startsWith("/dashboard"),
             },
         ],
-        users: [
+        transaction: [
             {
-                title: "Propriétaires",
-                url: "#",
-                icon: UsersIcon,
-                isActive: url.startsWith("/proprietaires"),
-                items: [
-                    {
-                        title: "Ajouter un propriétaire",
-                        url: "#",
-                    },
-                    {
-                        title: "Liste des propriétaires",
-                        url: "#",
-                    },
-                ],
-            },
-            {
-                title: "Locataires",
-                url: "#",
-                icon: UsersIcon,
-                isActive: url.startsWith("/locataires"),
-                items: [
-                    {
-                        title: "Ajouter un locataire",
-                        url: "#",
-                    },
-                    {
-                        title: "Liste des locataires",
-                        url: "#",
-                    },
-                ],
-            },
-        ],
-        biens: [
-            {
-                title: "Appartements",
-                url: "#",
-                icon: HousePlus,
-                isActive: url.startsWith("/appartements"),
-                items: [
-                    {
-                        title: "Ajouter un appart",
-                        url: "#",
-                    },
-                    {
-                        title: "Liste des apparts",
-                        url: "#",
-                    },
-                ],
-            },
-            {
-                title: "Contrats de bail",
-                url: "#",
-                icon: File,
-                isActive: url.startsWith("/contrats-de-bail"),
-            },
-        ],
-        comptabilite: [
-            {
-                title: "Factures",
-                url: "#",
-                icon: File,
-                isActive: url.startsWith("/factures"),
-                items: [
-                    {
-                        title: "Créer une facture",
-                        url: "#",
-                    },
-                    {
-                        title: "Liste des factures",
-                        url: "#",
-                    },
-                ],
-            },
-            {
-                title: "Paiements",
-                url: "#",
+                title: "Transaction",
+                url: route("transactions"),
                 icon: CreditCard,
-                isActive: url.startsWith("/paiements"),
+                isActive: url.startsWith("/transactions"),
             },
         ],
-        notifications: [
-            {
-                title: "Rappels",
-                url: "#",
-                icon: ClockFading,
-                isActive: url.startsWith("/rappels"),
-                items: [
-                    {
-                        title: "Créer un rappel",
-                        url: "#",
-                    },
-                    {
-                        title: "Liste des rappels",
-                        url: "#",
-                    },
-                ],
-            },
-            {
-                title: "Notifications",
-                url: "#",
-                icon: BellRing,
-                isActive: url.startsWith("/notifications"),
-            },
-        ],
+        
     };
 
     return (
@@ -148,23 +51,10 @@ export function AppSidebar() {
             <SidebarHeader>
                 <NavHeader />
             </SidebarHeader>
-            <SidebarContent className="mt-4">
+            <SidebarContent className="mt-4 gap-0">
                 <NavMain items={data.dashboard} />
-                <NavMain items={data.users} groupLabel={"Utilisateurs"} />
-                <NavMain items={data.biens} groupLabel={"Biens & contrats"} />
-                <NavMain
-                    items={data.comptabilite}
-                    groupLabel={"Comptabilité"}
-                />
-                <NavMain
-                    items={data.notifications}
-                    groupLabel={"Notifications & rappels"}
-                />
+                <NavMain items={data.transaction} />
             </SidebarContent>
-
-            <SidebarFooter className="bg-gray-80 border-t border-gray-200">
-                <NavSetting user={data.user} />
-            </SidebarFooter>
             <SidebarRail />
         </Sidebar>
     );
