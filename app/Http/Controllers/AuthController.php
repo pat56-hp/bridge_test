@@ -13,7 +13,7 @@ class AuthController extends Controller
     public function __construct(){}
 
     public function login(){
-        return Inertia::render('Auth/Login', ['title' => 'Connexion']);
+        return Inertia::render('auth/login', ['title' => 'Connexion']);
     }
 
     public function store(LoginRequest $request){
