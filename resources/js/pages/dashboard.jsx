@@ -1,10 +1,6 @@
 import React from "react";
 import AppLayout from "../layouts/app-layout";
 import PageTitle from "../components/page-title";
-import Statistique from "../components/dashboard/statistique";
-import DashboardGraph from "../components/dashboard/dashboard-graph";
-import PayRecent from "../components/dashboard/pay-recent";
-import DataRecent from "../components/dashboard/transactions";
 import DashboardStats from "../components/dashboard/dashboard-stat";
 import Transactions from "../components/dashboard/transactions";
 

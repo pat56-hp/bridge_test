@@ -1,10 +1,6 @@
 import React from "react";
 import { SidebarTrigger } from "../ui/sidebar";
-import { Separator } from "../ui/separator";
-import { Input } from "../ui/input";
-import { Search } from "lucide-react";
 import NavUser from "./nav-user";
-import NavNotification from "./nav-notification";
 
 export default function AppHeader({ className }) {
     return (

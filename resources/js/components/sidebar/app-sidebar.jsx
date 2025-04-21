@@ -1,22 +1,15 @@
 import {
-    BellRing,
-    ClockFading,
     CreditCard,
-    File,
     Home,
-    HousePlus,
-    UsersIcon,
 } from "lucide-react";
 import {
     Sidebar,
     SidebarContent,
-    SidebarFooter,
     SidebarHeader,
     SidebarRail,
 } from "../ui/sidebar";
 import NavMain from "./nav-main";
 import NavHeader from "./nav-header";
-import NavSetting from "./nav-setting";
 import { usePage } from "@inertiajs/react";
 
 export function AppSidebar() {

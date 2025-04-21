@@ -6,12 +6,8 @@ import {
     CardHeader,
     CardTitle,
 } from "../ui/card";
-import DashboardContrat from "./data/dashboard-contrat";
-import ContentLayout from "../../layouts/content-layout";
 import Datatable from "../datatable";
 import { getDate } from "../../helper/helper";
-import { Button } from "../ui/button";
-import { Plus } from "lucide-react";
 import Deposit from "../../pages/transactions/components/deposit";
 import Withdraw from "../../pages/transactions/components/withdraw";
 
